@@ -1,0 +1,2 @@
+Codigo do produto: 2 quantidade 3 Valor 2 
+ total da compra 6  

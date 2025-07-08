@@ -1,0 +1,2 @@
+Codigo do produto: 12 quantidade 10 Valor 20 
+ total da compra 200  

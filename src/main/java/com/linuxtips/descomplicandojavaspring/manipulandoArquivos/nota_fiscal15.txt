@@ -1,0 +1,2 @@
+Codigo do produto: 15 quantidade 20 Valor 18 
+ total da compra 360  

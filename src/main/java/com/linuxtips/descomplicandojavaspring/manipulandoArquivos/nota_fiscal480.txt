@@ -1,0 +1,4 @@
+Codigo do produto: 480 quantidade 300 Valor 2525 
+ total da compra 757500  
+ Codigo do produto: 480 quantidade 301 Valor 2525 
+ total da compra 2525  
