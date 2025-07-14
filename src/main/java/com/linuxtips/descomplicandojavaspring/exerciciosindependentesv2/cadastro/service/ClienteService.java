@@ -39,7 +39,7 @@ public class ClienteService {
         }
         if(!existe){
             clientes.add(cliente1);
-            System.out.println("1 Cliente foi adcionado");
+            System.out.println("Documento ja existe. Os dados foram atualizados");
         }
 
     }
