@@ -29,6 +29,7 @@ public class Cliente extends Pessoa{
     @Override
     public String toString() {
         return "Cliente{" +
+                super.toString()+
                 "pedido=" + pedido +
                 ", pagamento='" + pagamento + '\'' +
                 '}';

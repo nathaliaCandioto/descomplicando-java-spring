@@ -29,6 +29,7 @@ public class Vendedor extends Pessoa{
     @Override
     public String toString() {
         return "Vendedor{" +
+                super.toString()+
                 "salario=" + salario +
                 ", comissao=" + comissao +
                 '}';

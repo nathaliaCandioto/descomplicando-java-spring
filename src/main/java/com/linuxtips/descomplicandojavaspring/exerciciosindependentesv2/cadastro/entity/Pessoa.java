@@ -5,6 +5,7 @@ public class Pessoa {
     private String nome,email,documento;
     private Integer telefone;
 
+
     Pessoa(String nome,String email,String documento,Integer telefone){
         this.nome=nome;
         this.email=email;
@@ -42,5 +43,15 @@ public class Pessoa {
 
     public void setTelefone(Integer telefone) {
         this.telefone = telefone;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", documento='" + documento + '\'' +
+                ", telefone=" + telefone +
+                '}';
     }
 }

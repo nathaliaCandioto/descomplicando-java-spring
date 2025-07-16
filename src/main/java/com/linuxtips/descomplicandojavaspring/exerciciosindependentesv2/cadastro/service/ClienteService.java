@@ -70,6 +70,7 @@ public class ClienteService {
                 cl.setTelefone(telefone);
                 cl.setPagamento(pagamento);
                 cl.setPedido(pedido);
+                System.out.println("Os dados foram atualizados");
             }
 
         }
