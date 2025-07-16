@@ -13,7 +13,7 @@ public class CadastroMain {
         ClienteService clienteService = new ClienteService();
         Scanner entrada = new Scanner(System.in);
 
-        //CADASTRO
+        //CADASTRO VENDEDOR
         System.out.println("Digite o documento do vendedor");
         String documento = entrada.nextLine().trim();
         System.out.println("Digite o nome do vendedor");
@@ -41,7 +41,7 @@ public class CadastroMain {
 
         }
 
-       //LISTAR VENDEDOR POR DOCUMENTO
+        //LISTAR VENDEDOR POR DOCUMENTO
 
         System.out.println("Informe o documento que deseja pesquisar");
         String dc = entrada.nextLine();
@@ -52,8 +52,21 @@ public class CadastroMain {
         String doc = entrada.nextLine();
         vendedorService.excluiVendedor(documento);
 
+        //CADASTRA CLIENTE
+        System.out.println("Informe o nome do cliente");
+        String nomeCliente =entrada.nextLine();
+        System.out.println("Informe o documento do cliente");
+        String documentoCliente =entrada.nextLine();
+        System.out.println("Informe o email do cliente");
+        String emailCliente =entrada.nextLine();
+        System.out.println("Informe o telefone do cliente");
+        Integer telefoneCliente =Integer.parseInt(entrada.nextLine());
+        System.out.println("Informe o numero do pedido do cliente");
+        Integer pedidoCliente =Integer.parseInt(entrada.nextLine());
+        System.out.println("Informe o meio de pagamento do cliente");
+        String pagamentoCliente =entrada.nextLine();
 
-
+        clienteService.cadastraCliente(nomeCliente,emailCliente,documentoCliente,telefoneCliente,pagamentoCliente,pedidoCliente);
 
     }
 
