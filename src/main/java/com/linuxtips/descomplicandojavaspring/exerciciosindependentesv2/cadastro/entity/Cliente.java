@@ -25,4 +25,12 @@ public class Cliente extends Pessoa{
     public void setPagamento(String pagamento) {
         this.pagamento = pagamento;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "pedido=" + pedido +
+                ", pagamento='" + pagamento + '\'' +
+                '}';
+    }
 }

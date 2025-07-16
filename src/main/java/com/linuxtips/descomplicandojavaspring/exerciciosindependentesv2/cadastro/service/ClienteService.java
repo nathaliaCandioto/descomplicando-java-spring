@@ -22,26 +22,57 @@ public class ClienteService {
         boolean existe = false;
 
         for (int i = 0; i < clientes.size(); i++) {
-            Cliente c1 = clientes.get(i);
-            if (c1.getDocumento().equalsIgnoreCase(cliente1.getDocumento())) {
-                c1.setNome(nome);
-                c1.setEmail(email);
-                c1.setTelefone(telefone);
-                c1.setPagamento(pagamento);
-                c1.setPedido(pedido);
+            Cliente cl = clientes.get(i);
+            if (cl.getDocumento().equalsIgnoreCase(cliente1.getDocumento())) {
+                cl.setNome(nome);
+                cl.setEmail(email);
+                cl.setTelefone(telefone);
+                cl.setPagamento(pagamento);
+                cl.setPedido(pedido);
 
                 System.out.println("Documento ja existe. Os dados foram atualizados");
-                existe=true;
+                existe = true;
                 break;
             }
 
 
         }
-        if(!existe){
+        if (!existe) {
             clientes.add(cliente1);
             System.out.println("Documento ja existe. Os dados foram atualizados");
         }
 
     }
 
+    public void excluiCliente(String documento) {
+        boolean exclui = clientes.removeIf(cl -> cl.getDocumento().equalsIgnoreCase(documento));
+        if(exclui) {
+            System.out.println("O cliente " + documento + " foi excluído");
+        }
+    }
+
+    public void listaPorDocumento(String documento) {
+        for (int i = 0; i < clientes.size(); i++) {
+            Cliente cl = clientes.get(i);
+            if (cl.getDocumento().equalsIgnoreCase(documento)) {
+                System.out.println(cl.toString());
+
+            }
+        }
+    }
+
+
+    public void atualizaCliente(String nome, String email, String documento, Integer telefone, String pagamento, Integer pedido) {
+        for (Cliente cl : clientes) {
+            if(cl.getDocumento().equalsIgnoreCase(documento)){
+                cl.setNome(nome);
+                cl.setEmail(email);
+                cl.setTelefone(telefone);
+                cl.setPagamento(pagamento);
+                cl.setPedido(pedido);
+            }
+
+        }
+
+    }
 }

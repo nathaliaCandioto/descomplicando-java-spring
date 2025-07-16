@@ -25,4 +25,12 @@ public class Vendedor extends Pessoa{
     public void setComissao(Integer comissao) {
         this.comissao = comissao;
     }
+
+    @Override
+    public String toString() {
+        return "Vendedor{" +
+                "salario=" + salario +
+                ", comissao=" + comissao +
+                '}';
+    }
 }
