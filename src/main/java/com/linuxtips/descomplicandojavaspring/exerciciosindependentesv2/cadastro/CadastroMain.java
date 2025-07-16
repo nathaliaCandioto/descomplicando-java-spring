@@ -29,7 +29,7 @@ public class CadastroMain {
 
         vendedorService.cadastraVendedor(nome, email, documento, telefone, salario, comissao);
 
-        //LISTAR
+        //LISTAR VENDEDOR
 
         System.out.println("Deseja listar os vendedores? Digite sim ou nao");
         String resposta = entrada.nextLine();
@@ -41,18 +41,16 @@ public class CadastroMain {
 
         }
 
-        //EXCLUÍR
-        System.out.println("Para exclusao informe o documento");
-        String doc = entrada.nextLine();
-        System.out.println(" os dados foram excluidos");
-        vendedorService.excluiVendedor(documento);
-
-        //LISTAR POR DOCUMENTO
+       //LISTAR VENDEDOR POR DOCUMENTO
 
         System.out.println("Informe o documento que deseja pesquisar");
         String dc = entrada.nextLine();
-        System.out.println(" os dados foram excluidos");
         vendedorService.listaPordocumento(documento);
+
+        //EXCLUÍR VENDEDOR
+        System.out.println("Para exclusao informe o documento");
+        String doc = entrada.nextLine();
+        vendedorService.excluiVendedor(documento);
 
 
 

@@ -72,20 +72,4 @@ public class VendedorService {
 
     }
 
-
-//    public void atualizaVendedor(String documento) {
-//        for (int i = 0; i < vendedores.size(); i++) {
-//            Vendedor vd = vendedores.get(i);
-//            if (vd.getDocumento().equalsIgnoreCase(documento)) {
-//                vd.setNome(nome);
-//                vd.setEmail(email);
-//                vd.setTelefone(telefone);
-//                vd.setSalario(salario);
-//                vd.setComissao(comissao);
-//
-//                System.out.println("Os dados foram atualizados");
-//            }
-//        }
-//
-//    }
 }
