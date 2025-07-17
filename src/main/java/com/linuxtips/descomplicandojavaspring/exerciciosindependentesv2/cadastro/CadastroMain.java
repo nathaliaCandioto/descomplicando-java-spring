@@ -48,7 +48,7 @@ public class CadastroMain {
         vendedorService.listaPordocumento(documento);
 
         //EXCLUÍR VENDEDOR
-        System.out.println("Para exclusao informe o documento");
+        System.out.println("Para exclusao informe o documento do vendedor");
         String doc = entrada.nextLine();
         vendedorService.excluiVendedor(documento);
 
@@ -68,8 +68,25 @@ public class CadastroMain {
 
         clienteService.cadastraCliente(nomeCliente,emailCliente,documentoCliente,telefoneCliente,pagamentoCliente,pedidoCliente);
 
+        //LISTAR CLIENTE
+        System.out.println("Deseja listar cliente? digite sim ou nao");
+        String respostaCliente=entrada.nextLine();
+        if(respostaCliente.equalsIgnoreCase("sim")){
+            clienteService.ListClient();
+        }if(respostaCliente.equalsIgnoreCase("nao")){
+            System.out.println("nenhum cliente sera listado");
+        }
+
+        //LISTAR CLIENTE POR DOCUMENTO
+        System.out.println("Informe o documento que deseja pesquisar");
+        String dcCliente=entrada.nextLine();
+        clienteService.listaPorDocumento(dcCliente);
+
+        //EXLUIR CLIENTE
+        System.out.println("Para exclusão informe o documento do cliente");
+        String doclient=entrada.nextLine();
+        clienteService.excluiCliente(doclient);
+
     }
-
-
 
 }
